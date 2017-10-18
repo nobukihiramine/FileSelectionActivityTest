@@ -95,8 +95,8 @@ public class FileSelectionActivity extends AppCompatActivity implements AdapterV
 
 		static class ViewHolder
 		{
-			TextView m_textviewFileName;
-			TextView m_textviewFileSize;
+			TextView textviewFileName;
+			TextView textviewFileSize;
 		}
 
 		// 一要素のビューの生成
@@ -121,8 +121,8 @@ public class FileSelectionActivity extends AppCompatActivity implements AdapterV
 
 				convertView = layout;
 				viewHolder = new ViewHolder();
-				viewHolder.m_textviewFileName = textviewFileName;
-				viewHolder.m_textviewFileSize = textviewFileSize;
+				viewHolder.textviewFileName = textviewFileName;
+				viewHolder.textviewFileSize = textviewFileSize;
 				convertView.setTag( viewHolder );
 			}
 			else
@@ -133,13 +133,13 @@ public class FileSelectionActivity extends AppCompatActivity implements AdapterV
 			FileInfo fileinfo = m_listFileInfo.get( position );
 			if( fileinfo.getFile().isDirectory() )
 			{ // ディレクトリの場合は、名前の後ろに「/」を付ける
-				viewHolder.m_textviewFileName.setText( fileinfo.getName() + "/" );
-				viewHolder.m_textviewFileSize.setText( "(directory)" );
+				viewHolder.textviewFileName.setText( fileinfo.getName() + "/" );
+				viewHolder.textviewFileSize.setText( "(directory)" );
 			}
 			else
 			{
-				viewHolder.m_textviewFileName.setText( fileinfo.getName() );
-				viewHolder.m_textviewFileSize.setText( String.valueOf( fileinfo.getFile().length() / 1024 ) + " [KB]" );
+				viewHolder.textviewFileName.setText( fileinfo.getName() );
+				viewHolder.textviewFileSize.setText( String.valueOf( fileinfo.getFile().length() / 1024 ) + " [KB]" );
 			}
 
 			return convertView;
