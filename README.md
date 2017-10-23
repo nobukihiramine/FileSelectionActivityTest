@@ -1,5 +1,6 @@
 # FileSelectionActivityTest
 ファイル選択アクティビティ （ Activity + ListView )の動作テスト用のプロジェクトです。
+http://www.hiramine.com/programming/android/fileselectionactivity.html
 
 ## Screenshots : スクリーンショット
 <img src="screenshots/screenshot_01.png" width="240" alt="Screenshot"/> <img src="screenshots/screenshot_02.png" width="240" alt="Screenshot"/> <img src="screenshots/screenshot_03.png" width="240" alt="Screenshot"/>
